@@ -1,0 +1,143 @@
+.root {
+    display: grid;
+    grid-column: content-start / content-end;
+    grid-template-columns: max-content 1fr max-content;
+    padding: 0rem 3rem;
+    background-color: $color-primary-dark;
+    color: $color-primary-dark-inverted;
+    border-radius: 3px;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content 2rem min-content; 
+    }
+}
+
+.root-title {
+    align-self: center; 
+
+    @media only screen and (max-width: $bp-medium) {
+        margin-top: 2rem;
+        justify-self: center;
+        grid-column: 1 / -1;
+    }
+}
+
+.root-form {
+    grid-column: 3 / 4;
+    display: grid;
+    grid-template-columns: max-content max-content max-content max-content;
+    grid-gap: 1rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content min-content min-content min-content;
+    }
+}
+
+.root-form-block {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    grid-gap: 1rem;
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: max-content 1fr;
+        grid-template-rows: 1fr;
+        justify-self: center;
+    }
+
+    @media only screen and (max-width: $bp-smaller) {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content min-content;
+    }
+}
+
+.root-form-label {
+
+}
+
+.root-form-input {
+    width: 15rem;
+    height: 3rem;
+    border-radius: 3px;
+    padding: 1rem;
+    border: none;
+    @media only screen and (max-width: $bp-small) {
+        width: 100%;
+    }
+}
+
+.root-add-submit {
+    display: grid;
+    grid-template-columns: min-content min-content;
+    height: 7rem;
+    align-self: center;
+    padding: 1rem;
+
+    @media only screen and (max-width: $bp-small) {
+        justify-self: center;
+    }
+}
+
+.root-add-icon {
+    fill: $color-primary-dark-inverted;
+    height: 5rem;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+        transform: translateY(-.5rem) scale(1.03); 
+        filter: brightness(70%);
+    }
+    &:active {
+        transform: translateY(-.2rem) scale(1.01);
+    }
+}
+
+
+ 
+.root-add-input {
+    align-self: center; 
+}
+
+.form-element-name {
+    width: 15rem;
+    height: 3rem;
+    border-radius: 3px;
+}
+
+.root-range {
+    grid-column: 3 / 4;
+    display: grid;
+    grid-template-columns: min-content min-content min-content min-content;
+    align-self: center;
+}
+
+.form-element-number {
+    width: 5rem;
+    height: 3rem;
+    border-radius: 3px;
+    // padding: 1rem;
+    // margin-right: 1rem;
+    align-self: center;
+} 
+
+.root-range-text {
+    align-self: center;
+    margin-right: 1rem;
+}
+
+.form-error-message-root {
+    color: rgb(250, 250, 62);
+    justify-self: left;
+    align-self: center;
+    font-size: 1.3rem;
+} 
+.form-error-root {
+    border: 1px solid rgb(250, 250, 62);
+}

@@ -1,0 +1,168 @@
+.factory {
+    display: grid;
+    grid-column: content-start / content-end;
+    grid-template-columns: max-content 1fr max-content 1fr max-content max-content;
+    grid-gap: 2rem;
+    padding: 0rem 3rem;
+    margin-left: 3rem;
+    margin-top: 1rem;
+    background-color: $color-primary-dark-inverted;
+    color: $color-primary-dark;
+    border-radius: 3px;
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content 1rem min-content 1rem min-content min-content;
+        grid-gap: 0;
+    }
+}
+
+.factory-title {
+    align-self: center;
+    @media only screen and (max-width: $bp-small) {
+        margin-top: 2rem;
+        justify-self: center;
+    }
+}
+
+.factory-range {
+    grid-column: 3 / 4;
+    align-self: center;
+
+    @media only screen and (max-width: $bp-small) {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+        justify-self: center;
+    }
+}
+
+.factory-add-main {
+    display: grid;
+    grid-template-columns: max-content min-content min-content;
+}
+
+
+
+.factory-add-cta {
+    grid-column: 5 / 6;
+    display: grid;
+    // grid-template-columns: max-content min-content min-content;
+    grid-template-rows: min-content min-content;
+
+    @media only screen and (max-width: $bp-small) {
+        grid-column: 1 / -1;
+        grid-row: 5 / 6;
+        justify-self: center;
+    }
+}
+
+.factory-add-submit {
+    height: 5rem;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.factory-add-text {
+    grid-column: 1 / 2;
+    align-self: center;
+    padding-right: 1rem;
+} 
+ 
+.factory-form-element {
+    grid-column: 2 / 3;
+    align-self: center;
+}
+
+.factory-add-icon {
+    fill: $color-primary-dark;
+    height: 5.5rem;
+    align-self: center;
+    padding: 1rem;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-.3rem) scale(1.03); 
+        filter: brightness(70%);
+    }
+
+    &:active {
+        transform: translateY(-.1rem) scale(1.01);
+    }
+}
+
+.factory-add-input {
+    align-self: center;
+}
+
+.factory-input-element {
+    width: 5rem;
+    height: 3rem;
+    border-radius: 3px;
+    padding: 1rem;
+} 
+
+.edit-and-delete {
+    grid-column: 6 / 7;
+    display: grid;
+    grid-template-columns: min-content min-content;
+
+    @media only screen and (max-width: $bp-small) {
+        grid-column: 1 / -1;
+        grid-row: 6 / 7;
+        justify-self: end;
+        grid-gap: 2rem;
+    }
+}
+
+.factory-delete {
+    align-self: center;
+}
+
+.factory-delete-icon {
+    fill: $color-primary-dark;
+    height: 2rem;
+    margin-top: 1rem;
+    
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+        transform: translateY(-.3rem) scale(1.03); 
+        filter: brightness(70%);
+    }
+
+    &:active {
+        transform: translateY(-.1rem) scale(1.01);
+    }
+}
+
+.factory-edit {
+    color: $color-primary-dark;
+    transition: all .2s;
+}
+
+.factory-edit-icon {
+    fill: $color-primary-dark;
+    height: 1.5rem;
+    margin-top: 1.3rem;
+    transition: all .2s;
+
+    &:hover {
+        transform: translateY(-.3rem) scale(1.03); 
+        filter: brightness(70%);
+    }
+
+    &:active {
+        transform: translateY(-.1rem) scale(1.01);
+    }
+}
+
+.form-error-message {
+    color: #881600;
+    justify-self: left;
+    align-self: center;
+} 
+.form-error {
+    border: 1px solid #881600;
+    grid-column-start: span 3;
+}
