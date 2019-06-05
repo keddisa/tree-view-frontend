@@ -34,7 +34,6 @@ class EditFactory extends React.Component {
     }
 
     onSubmit = (formProps) => {
-        console.log(formProps)
         let factory = formProps;
         factory.children = [];
         this.props.editFactory(factory);

@@ -36,7 +36,6 @@ class Root extends React.Component {
     }
 
     onSubmit = (formProps) => {
-        console.log(formProps);
         this.props.addFactory(formProps);
     }
 

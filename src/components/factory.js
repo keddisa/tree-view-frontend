@@ -56,8 +56,6 @@ class Factory extends React.Component {
     }
 
     onGenerate = (event) => {
-        // event.preventDefault();
-        console.log(this.state.factoryForm.valid)
         if(!this.state.factoryForm.valid) {
             event.preventDefault();
         } else {
@@ -70,7 +68,6 @@ class Factory extends React.Component {
                 arr.push(num);
             }
             this.props.factory.children = arr;
-            console.log(this.props.factory)
             this.props.generateChildren(this.props.factory);
         }
     }
@@ -101,7 +98,6 @@ class Factory extends React.Component {
     }
 
     onInputChange = (event) => {
-        console.log(event.target.value);
         const updatedForm = {
             ...this.state.factoryForm
         }
